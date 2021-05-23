@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonds</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <a href="/new">Add a new Album</a>
+    <ul>
+        <% for (let album of albums) {%>
+            <li>
+                <a href="<%=album._id %>">
+                    <%=album.name %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonds</title>
+</head>
+
+<body>
+    <h1>
+        <%=album.name %>
+    </h1>
+    <h2>
+        <%= album.artist %>
+    </h2>
+    <a href="/">All Albums</a><br>
+    <a href="/<%=album._id %>/new">Add a new song</a><br>
+    <a href="/<%=album._id %>/edit">Edit Album</a><br>
+    <form action="/<%= album._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+    <p>
+        <% for (let music of album.musics) {%>
+            <li>
+                <a href="/<%=album._id %>/<%=music._id %>">
+                    <%=music.name %>
+                </a>
+            </li>
+            <% } %>
+    </p>
+</body>
+
+</html>

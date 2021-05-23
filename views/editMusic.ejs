@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonds</title>
+</head>
+
+<body>
+    <h1>Edit Music</h1>
+    <form action="/<%=album_id %>/<%= music._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="music[name]" value="<%= music.name %> ">
+        </div>
+        <div>
+            <label for="fileUpload">Upload file</label>
+            <input type="file" id="fileUpload" name="music[file]">
+        </div>
+        <button>Update Music</button>
+    </form>
+</body>
+
+</html>
